@@ -295,8 +295,6 @@ body {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
-
-  transition: width var(--transition-dur) var(--transition-timfunc);
 }
 
 .header {
@@ -545,7 +543,6 @@ body {
 .works-link:hover .overlay,
 .works-link:focus-visible .overlay {
   height: 100%;
-  transition: height var(--transition-dur) var(--transition-timfunc);
 }
 
 /* #endregion */
