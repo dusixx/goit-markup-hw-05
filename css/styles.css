@@ -205,6 +205,8 @@ body {
   fill: currentColor;
 }
 
+.link,
+.btn,
 .link:hover,
 .link:focus-visible,
 .btn:hover,
@@ -517,6 +519,8 @@ body {
 
   overflow: hidden;
   background-color: rgba(33, 150, 243, 0.9);
+
+  transition: height var(--transition-dur) var(--transition-timfunc);
 }
 
 .works .overlay-text {
