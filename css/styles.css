@@ -53,11 +53,6 @@
   --socials-link-hover-color: var(--white-color);
 
   /* misc */
-  /* --outline-color: rgb(237, 98, 255);
-  --outline-width: 1px;
-  --outline-offset: calc(var(--outline-width) * -1);
-  --outline-style: solid; */
-
   --container-width: 1200px;
   --section-width: 1600px;
 
@@ -116,9 +111,6 @@ body {
   width: var(--container-width);
   padding: 0 15px;
   margin: 0 auto;
-
-  /* outline: var(--outline-color) var(--outline-style) var(--outline-width);
-  outline-offset: var(--outline-offset); */
 }
 
 .section {
@@ -273,7 +265,6 @@ body {
 .header .link:hover,
 .header .link:focus-visible {
   color: var(--link-hover-color);
-  /* transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .header .link.current {
@@ -339,9 +330,7 @@ body {
 .btn.primary {
   padding: 10px 32px;
   margin: 0 auto;
-
   min-width: 216px;
-  /* min-height: 50px; */
 
   font-weight: 700;
   line-height: calc(30 / var(--btn-font-size-px-num));
@@ -355,7 +344,6 @@ body {
 .btn.primary:hover,
 .btn.primary:focus-visible {
   background-color: var(--btn-prim-hover-background);
-  /* transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 /* #endregion */
@@ -468,7 +456,6 @@ body {
 .team .socials-link:focus-visible {
   color: var(--socials-link-hover-color);
   background-color: var(--link-hover-color);
-  /* transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 /* #endregion */
@@ -478,7 +465,6 @@ body {
 
 .btn.secondary {
   padding: 6px 22px;
-  /* min-height: 38px; */
 
   font-weight: 500;
   line-height: calc(26 / var(--btn-font-size-px-num));
@@ -492,10 +478,6 @@ body {
   color: var(--btn-sec-hover-color);
   background-color: var(--btn-sec-hover-background);
   box-shadow: var(--btn-sec-shaddow);
-
-  /* transition-property: color box-shadow background-color;
-  transition-duration: 0.25s;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .filter-list {
@@ -570,7 +552,6 @@ body {
 .works-link:focus-visible {
   display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  /* transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 /* #endregion */
@@ -601,7 +582,6 @@ body {
 .customers .link:hover,
 .customers .link:focus-visible {
   color: var(--accent-color);
-  /* transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 /* #endregion */
@@ -637,7 +617,6 @@ body {
 .footer .link:hover,
 .footer .link:focus-visible {
   color: var(--link-hover-color);
-  /* transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 .footer .addr {
@@ -649,10 +628,6 @@ body {
   align-items: baseline;
   gap: 70px;
 }
-
-/* .footer .contacts {
-  margin-right: 70px;
-} */
 
 .footer .follow-title {
   display: block;
@@ -673,7 +648,6 @@ body {
 .footer .socials-link:focus-visible {
   color: var(--socials-link-hover-color);
   background-color: var(--link-hover-color);
-  /* transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
 /* #endregion */
@@ -698,7 +672,6 @@ body {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-  /* visibility: hidden; */
 }
 
 .backdrop.is-hidden .modal {
