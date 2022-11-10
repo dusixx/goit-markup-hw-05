@@ -65,7 +65,7 @@
 
   /* animation */
   --transition-dur: 250ms;
-  --transition-props: color background-color box-shadow;
+  --transition-props: color, background-color, box-shadow;
   --transition-timfunc: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -676,6 +676,7 @@ body {
 
   opacity: 1;
   visibility: visible;
+
   transition: opacity var(--transition-dur) var(--transition-timfunc),
     visibility var(--transition-dur) var(--transition-timfunc);
 }
