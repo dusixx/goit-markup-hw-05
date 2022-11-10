@@ -504,13 +504,15 @@ body {
   margin-bottom: 50px;
 }
 
+/* #region Overlay desc */
+
 .works .thumb {
   position: relative;
   width: 370px;
   height: 294px;
-}
 
-/* #region Overlay desc */
+  overflow: hidden;
+}
 
 .works .overlay {
   position: absolute;
@@ -522,11 +524,11 @@ body {
   align-items: center;
 
   width: 100%;
-  height: 0;
+  height: 100%;
 
-  overflow: hidden;
   background-color: rgba(33, 150, 243, 0.9);
-  transition: height var(--transition-dur) var(--transition-timfunc);
+  transform: translateY(100%);
+  transition: transform var(--transition-dur) var(--transition-timfunc);
 }
 
 .works .overlay-text {
@@ -542,7 +544,7 @@ body {
 
 .works-link:hover .overlay,
 .works-link:focus-visible .overlay {
-  height: 100%;
+  transform: translateY(0);
 }
 
 /* #endregion */
