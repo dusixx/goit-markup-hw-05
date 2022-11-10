@@ -104,6 +104,11 @@ address {
 /*======================================= */
 /* #region Base styles */
 
+html {
+  /* chrome://flags/#smooth-scrolling  */
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-family);
   font-size: var(--font-size-px);
@@ -205,12 +210,10 @@ body {
   fill: currentColor;
 }
 
+/* IAE Animation */
+
 .link,
-.btn,
-.link:hover,
-.link:focus-visible,
-.btn:hover,
-.btn:focus-visible {
+.btn {
   transition-property: var(--transition-props);
   transition-duration: var(--transition-dur);
   transition-timing-function: var(--transition-timfunc);
@@ -289,8 +292,11 @@ body {
   display: block;
   width: 100%;
 
-  border-bottom: 4px solid var(--accent-color);
+  height: 4px;
+  background-color: var(--accent-color);
   border-radius: 2px;
+
+  transition: width var(--transition-dur) var(--transition-timfunc);
 }
 
 .header {
@@ -399,7 +405,7 @@ body {
   position: relative;
 }
 
-.services .item-overlay {
+.services .overlay {
   position: absolute;
   bottom: 0;
 
@@ -412,7 +418,7 @@ body {
 }
 
 .services .overlay-text {
-  height: 100%;
+  height: 16px;
 
   font-weight: 700;
   line-height: (16 / var(--font-size-px-num));
@@ -514,28 +520,30 @@ body {
   left: 0;
   right: 0;
 
+  display: flex;
+  align-items: center;
+
   width: 100%;
   height: 0;
 
   overflow: hidden;
   background-color: rgba(33, 150, 243, 0.9);
-
   transition: height var(--transition-dur) var(--transition-timfunc);
 }
 
 .works .overlay-text {
   height: 168px;
-  margin: 63px 24px;
+  padding: 0 24px;
 
   font-size: 18px;
   line-height: calc(28 / 18);
   color: var(--white-color);
 
-  overflow: auto;
+  overflow: hidden;
 }
 
 .works-link:hover .overlay,
-.works-link:hover .overlay {
+.works-link:focus-visible .overlay {
   height: 100%;
   transition: height var(--transition-dur) var(--transition-timfunc);
 }
@@ -681,8 +689,9 @@ body {
   opacity: 1;
   visibility: visible;
 
-  transition: opacity var(--transition-dur) var(--transition-timfunc),
-    visibility var(--transition-dur) var(--transition-timfunc);
+  transition-property: opacity, visibility;
+  transition-duration: var(--transition-dur);
+  transition-timing-function: var(--transition-timfunc);
 }
 
 .backdrop.is-hidden {
@@ -700,7 +709,7 @@ body {
   top: 50%;
   left: 50%;
 
-  min-width: 528px;
+  width: 528px;
   min-height: 581px;
 
   background-color: var(--white-color);
@@ -716,6 +725,7 @@ body {
   top: 8px;
   right: 8px;
 
+  padding: 0;
   width: 30px;
   height: 30px;
 
