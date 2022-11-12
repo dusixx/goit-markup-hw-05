@@ -573,7 +573,6 @@ body {
 
 .works-link:hover,
 .works-link:focus-visible {
-  display: block;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -697,9 +696,8 @@ body {
   opacity: 1;
   visibility: visible;
 
-  transition-property: opacity, visibility;
-  transition-duration: var(--transition-dur);
-  transition-timing-function: var(--transition-timfunc);
+  transition: opacity var(--transition-dur) var(--transition-timfunc),
+    visibility var(--transition-dur) var(--transition-timfunc);
 }
 
 .backdrop.is-hidden {
@@ -741,6 +739,9 @@ body {
   line-height: 0;
 
   background-color: inherit;
+  color: #000000;
+  transition: color var(--transition-dur) var(--transition-timfunc);
+
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 }
